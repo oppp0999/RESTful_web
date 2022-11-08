@@ -1,0 +1,30 @@
+REST - 유효성 검사를 위한 코틀린 스프링 부트
+
+1. part1에 있는 스타터 프로젝트로 시작하였고
+postman을 이용해 name을 보냈을 때 하드 코딩되었음을 알 수 있다.
+
+
+Add gradle dependency
+2. 원래 존재하던 종속성을 지우고 새로운 종속성을 추가하여 유효성 검사를 진행한다.
+	implementation("org.springframework.boot:spring-boot-starter-validation")
+유효성 검사기를 추가한다.
+
+3. 컨트롤러에서 인터넷 java를 따라서
+유효성 검사 제약 조건 크기를 위해 인수를 제공한다.
+@Size
+@Valid
+
+    @field: Size(min=2, max=5)
+를 이용해서 작동하는지 확인할 수 있는 코드로 재작성.
+
+4. 그러면 name이라는 a 값을 post했을 때 유효성 검사를 진행하여 문자 갯수 2, 5 사이여야한다고 말한다.
+
+5. Explaining the root cause in kotlin
+google -> kotlin annotations (주석)을 검색
+기본적으로 주석은 타겟을 가진다.
+함수 속성 등 같은 주석을 달 수 있는 요소의 가능한 종류를 지정 등등
+
+6. javax validation constraints
+유효성을 검사해야 하는 모든 항목과 일치하도록 조사할 수 있는 주석도 있다.
+예를 들어
+@Pattern
