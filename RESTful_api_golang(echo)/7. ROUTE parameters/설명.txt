@@ -1,0 +1,12 @@
+라우트하는 주소에 매개변수와 쿼리 매개변수를 추가할 수 있다.
+vendor -> 주소를 위한 변수인데 라우트하는 주소에 /:vendor로 이용할 수 있다.
+
+e.GET("/products/:vendor", func(e echo.Context) error {
+	return c.JSON(http.StatusOK, c.Param("vendor")
+}
+
+c.Param -> param 메소드를 이용해서 어떤 종류의 값이 제공될 것으로 예상되는 쿼리 매개변수의 이름을 사용할 수 있다.
+?olderThan으로 ?를 이용해서 주소에 입력하는 쪽에서 이것을 이용해 olderThan에 전달할 수 있다
+
+우리는 이걸 param에 담을 수 있다.
+ex_ /products/apple?olderThan=iphone10

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d2e241-a262-4c6a-9073-8efdfdacc5ee" name="Changes" comment="" />
+    <list default="true" id="77d890b1-3323-4af2-91fa-8c8833ab3d71" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +26,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Hhutn6kw4ATNxFU3laALuK9AXP" />
+  <component name="ProjectId" id="2Hyq7YOFEcNL4LC0YlaYwo2kxaU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
