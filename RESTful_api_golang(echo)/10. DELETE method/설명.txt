@@ -1,0 +1,23 @@
+삭제 메소드
+
+제품 목록을 삭제하는 것으로 예시를 들 수 있다.
+
+e.get의 메소드의 내용을 가져와 delete로 수정하고 논리는 사실 같다.
+우선 제품이 있는지 확인을 하고 특정 제품의 키 값을 맵을 통해 살펴본다.
+
+제품이 pID와 같으면 제품은 있다고 판별
+
+여기까지는 사실 지금까지한 내용이다.
+
+products.splice()를 이용해 javascipt에서 제품 슬라이스에서바로 삭제하지만
+
+golang에서는 스플라이스를 직접 구현해주어야한다.
+
+splice := func(s []map[int]string, index int) []map[int]string{  단축된 슬라이스 또는 접합된 슬라이스를 얻어 반환하고자하는 값을 가져온다.
+	return append(s [index:], s[:index+1]...)
+
+}
+products = splice(products, index)
+인덱스를 제공하고 이 특정 제품에서 내 제품을 가져옴.
+즉 인덱스가 제거됨.
+

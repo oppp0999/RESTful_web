@@ -5,6 +5,7 @@ import (
 	"gopkg.in/go-playground/validator.v9"
 	"net/http"
 	"os"
+	"strconv"
 )
 
 func main() {
@@ -39,5 +40,25 @@ func main() {
 			len(products) + 1: reqBody.Name,
 		}
 		return c.JSON(http.StatusOK, product)
+	})
+
+	e.PUT("/products/:id", func(c echo.Context) error {
+		var product map[int]string
+		pID, err := strconv.Atoi(c.Param("id"))
+		if err != nil {
+			return err
+		}
+		for _, p := range products {
+			for k := range p {
+				if pID == k {
+					product = p
+				}
+			}
+		}
+
+		if product == nil {
+			return c.JSON(http.StatusNotFound, "product not found")
+		}
+		return c.JSON(http.StatusNotFound, product)
 	})
 }

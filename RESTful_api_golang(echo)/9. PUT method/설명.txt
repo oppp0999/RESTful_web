@@ -1,0 +1,13 @@
+값이 있는 제품 ID로 기존 제품을 업데이트하는 유효성 검사를 거쳐 필드에 게시하는 방법.
+
+아이템이 존재하는지 ID의 변수값을 가져와 확인을 거친후
+상황에 따라 c.JSON 값을 리턴해준다.
+
+if product == nil {
+	return c.JSON(http.StatusNotFound, "product not found")
+}
+return c.JSON(http.StatusNotFound, product)
+
+
+
+e.put을 이용하여 사용자값을 업로드할 수 있다.
