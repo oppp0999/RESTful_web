@@ -1,0 +1,2 @@
+컴퓨터 구성 config
+@Configuration이라고 하면 설정파일을 만들기 위한 애노테이션 or Bean을 등록하기 위한 애노테이션이다.
