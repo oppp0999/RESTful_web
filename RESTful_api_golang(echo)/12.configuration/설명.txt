@@ -1,2 +1,5 @@
 컴퓨터 구성 config
 @Configuration이라고 하면 설정파일을 만들기 위한 애노테이션 or Bean을 등록하기 위한 애노테이션이다.
+
+그리고 만든 struct 객체를 만들어 편하게 변수로 지정한 후에 사용할 수 있다.
+Cfg.host
