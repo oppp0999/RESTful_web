@@ -25,8 +25,10 @@ go/pkg/mod/github.com/labstack/echo/에 있는 핸들러func을 사용하여 log
 func serverHeader(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) error {
 	fmt.Println("inside serverheader middleware")
-	return next(c)	
+	return next(c)	 -> next를 이용해서 다음으로 할 것을 표시할 수 있다.
 }
 }
 
 이름과 print를 수정하여 log로 이용가능
+
+echo -> use 메서드라는 미들웨어 기능도 있다.
